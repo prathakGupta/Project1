@@ -10,11 +10,14 @@ const listingSchema = new Schema({
     type: String,
     required: true,
   },
-  imager: {
+  image: {
     type: String,
-    default: "https://imgs.search.brave.com/iNdia1bD3rKW8UvKjZco-enuBdhhU3oJ4p0ropyYfjw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNS8w/Ny8wNS8xMC8xOC90/cmVlLTgzMjA3OV82/NDAuanBn",
-    set : (v) => v === "" ? "https://imgs.search.brave.com/iNdia1bD3rKW8UvKjZco-enuBdhhU3oJ4p0ropyYfjw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNS8w/Ny8wNS8xMC8xOC90/cmVlLTgzMjA3OV82/NDAuanBn":v,
-
+    default:
+      "https://images.unsplash.com/photo-1625505826533-5c80aca7d157?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGdvYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    set: (v) =>
+      v === ""
+        ? "https://images.unsplash.com/photo-1625505826533-5c80aca7d157?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGdvYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+        : v,
   },
   price: {
     type: Number,
