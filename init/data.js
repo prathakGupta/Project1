@@ -290,6 +290,6 @@ const sampleListings = [
       country: "Costa Rica",
     },
   ];
-  
+  console.log(sampleListings.length);
   module.exports = { data: sampleListings };
   
